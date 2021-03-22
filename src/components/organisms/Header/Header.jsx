@@ -47,7 +47,6 @@ class Header extends React.PureComponent {
                 </div>
                 <Logo/>
                 <div className="sa-header-item-right">
-                    hay
                 </div>
             </header>
         )
