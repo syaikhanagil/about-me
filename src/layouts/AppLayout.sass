@@ -1,0 +1,14 @@
+@import ../assets/helpers/_mixin
+@import ../assets/helpers/_variables
+.sa-main
+    position: relative
+    display: block
+    width: calc( 100% - 20% )
+    height: 100%
+    float: right
+    @include mq($mobile)
+        width: 100%
+    &>[class*="-section"]
+        padding-right: 2rem
+        padding-left: 2rem
+        z-index: 3

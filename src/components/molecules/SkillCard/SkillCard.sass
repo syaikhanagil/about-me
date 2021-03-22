@@ -1,0 +1,36 @@
+@import ../../../assets/helpers/_mixin
+@import ../../../assets/helpers/_variables
+
+.sa-skill-card
+    position: relative
+    display: block
+    width: 100%
+    margin: 5px
+    padding: 10px
+    text-align: center
+    border: 1px solid transparentize($black, .8)
+    border-radius: 6px
+    .skill-bar
+        opacity: .3
+        transition: .3s ease
+    .svg
+        height: 70px
+        width: 70px
+        opacity: .3
+        transition: .3s ease
+    &:hover
+        .skill-bar
+            opacity: 1
+        .svg
+            opacity: 1
+
+.html
+    background: #e44d26
+.js
+    background: #f0db4f
+.nodejs
+    background: #83cd29
+.android
+    background: #a4c439
+.css
+    background: #1e8bd4 

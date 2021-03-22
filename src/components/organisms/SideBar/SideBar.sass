@@ -1,0 +1,74 @@
+@import ../../../assets/helpers/_mixin
+@import ../../../assets/helpers/_variables
+
+.sa-sidebar
+    position: fixed
+    display: block
+    width: calc( 100% - 80% )
+    height: 100%
+    padding: 20px 1%
+    background-color: $background-dark
+    color: $white
+    top: 0
+    left: 0
+    transition: .3s ease
+    overflow-y: auto
+    z-index: 10
+    @include mq($mobile)
+        width: 70%
+        left: -120%
+        z-index: 100
+        &.show
+            left: 0
+    .sa-sidebar-header
+        position: relative
+        display: block
+        padding: 20px 0
+        text-align: center
+    nav.sa-sidebar-menu
+        position: relative
+        display: block
+        width: 100%
+        margin: 100px 0 150px
+        @include mq($mobile)
+            margin: 70px 0 150px
+        ul.sa-menu-list
+            position: relative
+            display: block
+            margin: 0
+            padding: 0 10px
+            list-style: none
+            .sa-menu-item
+                position: relative
+                display: block
+                font-size: map-get($fs, base)
+                font-weight: map-get($fw, bold)
+                margin-top: 10px
+                margin-bottom: 15px
+                a
+                    color: $white
+                    text-decoration: none
+                    cursor: pointer
+                    .sa-icon
+                        margin-right: 10px
+                        margin-bottom: 0px
+                    &:hover
+                        color: $secondary
+                        .sa-icon
+                            color: $secondary
+                            fill: transparentize($secondary, .8)
+                    &.active
+                        color: $primary
+                        .sa-icon
+                            color: $primary
+                            fill: transparentize($primary, .8)
+    .sa-sidebar-footer
+        position: relative
+        display: block
+        padding: 20px 0
+        color: $white
+        font-size: 13px
+        text-align: center
+        .sa-icon
+            width: 13px
+            height: 13px

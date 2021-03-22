@@ -1,0 +1,21 @@
+@import ../../../assets/helpers/_mixin
+@import ../../../assets/helpers/_variables
+
+.skill-section
+    position: relative
+    padding-top: 70px
+    padding-bottom: 50px
+    background-color: #fff
+    .skill-container
+        position: relative
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        @include mq($mobile)
+            justify-content: space-between
+        &>.sa-skill-card
+            max-width: 24%
+            @include mq($mobile)
+                max-width: 45%
+                width: 100%

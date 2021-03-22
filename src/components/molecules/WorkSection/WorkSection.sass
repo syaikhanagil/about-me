@@ -1,0 +1,62 @@
+@import ../../../assets/helpers/_mixin
+@import ../../../assets/helpers/_variables
+
+.work-section
+    position: relative
+    padding-top: 70px
+    padding-bottom: 70px
+    background-color: #fff
+    .work-container
+        position: relative
+        display: block
+        .work-table
+            position: relative
+            display: flex
+            flex-wrap: wrap
+            width: 100%
+            margin: 0 auto
+            p
+                margin-bottom: .5em
+            .work-time
+                position: relative
+                flex-grow: 1
+                text-align: right
+                overflow: visible
+                width: 20%
+                @include mq($mobile)
+                    width: 30%
+                div
+                    width: 100%
+                    margin-left: -15px
+                    text-align: right
+            .work-content
+                position: relative
+                width: 80%
+                border-left: solid 2px $primary
+                flex-grow: 3
+                overflow: visible
+                padding-bottom: 20px
+                @include mq($mobile)
+                    width: 70%
+                .work-dot
+                    position: absolute
+                    background: $primary
+                    border-radius: 50%
+                    height: 10px
+                    left: -6px
+                    top: 7px
+                    width: 10px
+                div
+                    margin-left: 15px
+                    span
+                        font-size: 15px
+                        color: transparentize($black, .5)
+
+.work-card
+    border: 1px solid gray
+    border-radius: 5px
+    padding: 1em
+    max-width: 450px
+    font-family: Arial
+    position: relative
+    bottom: 20px

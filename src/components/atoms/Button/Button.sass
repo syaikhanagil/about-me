@@ -1,0 +1,27 @@
+@import ../../../assets/helpers/_variables
+.sa-btn
+    position: relative
+    display: inline-block
+    min-height: 38px
+    min-width: 130px
+    padding: 5px 10px
+    text-align: center
+    color: $white
+    background-color: transparentize($black, 1)
+    border: 1px solid transparentize($black, 1)
+    border-radius: 100px
+    outline: none
+    cursor: pointer
+    &.block
+        display: block
+    &.primary
+        background: $primary
+        &:hover
+            background: darken($primary, 5%)
+
+a.sa-btn
+    min-height: 0
+    padding: 10px 15px
+    text-decoration: none
+    &.primary
+        color: $white

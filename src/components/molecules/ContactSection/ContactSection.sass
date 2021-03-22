@@ -1,0 +1,27 @@
+@import ../../../assets/helpers/_mixin
+@import ../../../assets/helpers/_variables
+
+.contact-section
+    position: relative
+    padding-top: 50px
+    padding-bottom: 100px
+    background: transparentize(#aaaaaa, .9)
+    .contact-container
+        position: relative
+        display: block
+        width: 100%
+        height: auto
+        div
+            position: relative
+            display: block
+            margin: 10px auto
+            &:first-child
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                input
+                    max-width: 49%
+            &:last-child
+                margin-top: 25px
+        .sa-btn.block
+            width: 100%

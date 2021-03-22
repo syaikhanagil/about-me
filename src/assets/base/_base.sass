@@ -1,0 +1,183 @@
+// BASE //
+@import url('https://fonts.googleapis.com/css2?family=Poppins')
+@import ../helpers/_mixin
+@import ../helpers/_variables
+
+*, *::before, *::after
+    box-sizing: border-box
+    -webkit-text-stroke-width: 0
+    -webkit-text-stroke-color: transparentize($black, 1)
+
+html
+    scroll-behavior: smooth
+
+body
+    font-size: map-get($fs, base)
+    font-family: $ff
+    font-weight: map-get($fw, base)
+    color: map-get($grey, darken)
+    background-color: $white
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    overflow-x: hidden
+    &.no-scroll
+        overflow: hidden
+    &.no-scroll-ios
+        overflow: hidden
+        position: fixed
+    @include mq($retina)
+        font-size: map-get($fs, retina)
+
+a
+    color: $primary
+    cursor: pointer
+    transition: .3s
+    &:hover
+        color: $secondary
+    & > img
+        border: none
+button:focus
+    outline: none
+input,
+textarea
+    outline: none
+
+textarea
+    resize: none
+    overflow: auto
+
+strong,
+b
+    font-weight: map-get($fw, bold)
+
+em,
+i
+    font-style: italic
+
+u
+    text-decoration: underline
+
+img
+    max-width: 100%
+    font-size: 1.2rem
+
+p, li, th, td, dt, dd
+    line-height: 1.5
+
+p, ul, ol, table, h1, h2, h3, h4, h5, h6, dt,dd
+    margin: 0 0 1.2rem
+
+h1, h2, h3, h4, h5, h6
+    line-height: 1.15
+    font-weight: map-get($fw, bold)
+
+h1
+    font-size: map-get($fs, h1)
+
+h2
+    font-size: map-get($fs, h2)
+
+h3
+    font-size: map-get($fs, h3)
+
+h4
+    font-size: map-get($fs, h4)
+
+h5
+    font-size: map-get($fs, h5)
+
+h6
+    font-size: map-get($fs, h6)
+
+ul, ol
+    padding: 0
+    margin: 0 0 1.6rem
+    li
+        margin: 0
+        padding: 0 0 0 0.8rem
+
+    ul,
+    ol
+        margin-bottom: 0
+
+ol
+    margin-left: 2.4rem
+    list-style-type: decimal
+    list-style-position: inside
+    ol
+        list-style-type: lower-alpha
+        ol
+            list-style-type: decimal
+            ol
+                list-style-type: lower-alpha
+                ol
+                    list-style-type: decimal
+
+ul
+    margin-left: 2.4rem
+    list-style-type: square
+    list-style-position: inside
+    li
+        padding-left: 0.4rem
+
+    ul
+        list-style-type: disc
+        ul
+            list-style-type: square
+            ul
+                list-style-type: disc
+                ul
+                    list-style-type: square
+
+dl
+    dd
+        padding: 0
+        margin: 0 0 1.6rem 2.4rem
+
+table
+    border-collapse: collapse
+    th,
+    td
+        border-bottom: 1px solid rgba(map-get($grey, light), 0.2)
+        &:first-child
+            border-left: 1px solid rgba(map-get($grey, light), 0.2)
+
+        &:last-child
+            border-right: 1px solid rgba(map-get($grey, light), 0.2)
+
+    th
+        padding: 0.8rem 1.6rem
+        background-color: $primary
+        color: $white
+
+    td
+        padding: 0.8rem 1.6rem
+
+.rounded
+    border-radius: 100px !important
+
+
+.center
+    text-align: center
+
+.sm-center
+    @include mq($mobile)
+        text-align: center
+
+
+.no-padding
+    padding: 0 !important
+
+.no-margin
+    margin: 0 !important
+
+.m-1
+    margin: .5rem
+.m-2
+    margin: 1.5rem
+.m-3
+    margin: 2.5rem
+.m-4
+    margin: 3rem
+.m-5
+    margin: 5rem

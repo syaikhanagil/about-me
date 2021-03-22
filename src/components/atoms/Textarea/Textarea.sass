@@ -1,0 +1,20 @@
+@import ../../../assets/helpers/_mixin
+@import ../../../assets/helpers/_variables
+
+.sa-textarea
+    position: relative
+    min-width: 130px
+    min-height: 38px
+    padding: 15px 10px
+    outline: none
+    @include border(1px, transparentize($black, .7))
+    border-radius: 4px
+    transition: .3s ease
+    &:focus
+        @include border(1px, $primary)
+    &:hover
+        @include border(1px, transparentize($primary, .3))
+        
+    &.block
+        display: block
+        width: 100%

@@ -1,0 +1,78 @@
+// MIXIN
+
+// media query
+@mixin mq($breakpoints)
+    @if ($breakpoints)
+        @media only screen and (max-width: $breakpoints)
+            @content
+    @else
+        @media only screen and (max-width: $small)
+            @content
+
+// clearfix
+@mixin clearfix
+    &:before,
+    &:after
+        content: ' '
+        display: table
+
+    &:after
+        clear: both
+
+// ellipsis
+@mixin ellipsis
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+// multiline-ellipsis
+@mixin multiline-ellipsis($row)
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: $row
+    -webkit-box-orient: vertical
+
+// scroll-x
+@mixin scroll-x
+    white-space: nowrap
+    overflow-y: hidden
+    overflow-x: scroll
+    -ms-overflow-style: none
+    overflow: -moz-scrollbars-none
+    -webkit-overflow-scrolling: touch
+    &::-webkit-scrollbar
+        -webkit-appearance: none
+        display: none
+        width: 0
+
+// scroll-y
+@mixin scroll-y
+    overflow-x: hidden
+    overflow-y: scroll
+    -ms-overflow-style: none
+    overflow: -moz-scrollbars-none
+    -webkit-overflow-scrolling: touch
+    &::-webkit-scrollbar
+        -webkit-appearance: none
+        display: none
+        width: 0
+
+// d-table
+@mixin d-table
+    display: table
+    width: 100%
+    table-layout: fixed
+
+// d-table-cell-m
+
+    &-cell-m
+        display: table-cell
+        vertical-align: middle
+
+// rounded radius
+@mixin rounded($radius)
+    border-radius: $radius
+
+// outline border
+@mixin border($width, $color)
+    border: $width solid $color

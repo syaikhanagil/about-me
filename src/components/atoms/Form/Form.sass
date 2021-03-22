@@ -1,0 +1,12 @@
+@import ../../../assets/helpers/_mixin
+@import ../../../assets/helpers/_variables
+.sa-form
+    position: relative
+    display: block
+    padding: 30px 25px
+    background: $white
+    border-radius: 6px
+    box-shadow: 0 3px 6px 3px transparentize($black, .9)
+    &.transparent
+        background: transparentize($black, 1) !important
+        box-shadow: transparentize($black, 1) !important
