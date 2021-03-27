@@ -15,7 +15,10 @@ const AboutSection = (props) => {
                 <div className="about-card">
                     <div className="about-desc">
                         <Text>My name is <strong>Saekhan Agil</strong>, Web developer from Pemalang, Central Java, Indonesia. Maybe I haven't had many years of experience, but I can learn a lot in a short time.</Text>
-                        <Button block primary>Download CV</Button>
+                        <Button block primary onClick={() => {
+                            const element = document.getElementById('skill-section');
+                            element.scrollIntoView(true)
+                        }}>More Skill</Button>
                     </div>
                     <div className="about-skill">
                         <ProgressBar skill title="Creativity" level="80" style={{

@@ -17,7 +17,7 @@ import './SkillSection.sass';
 class SkillSection extends React.PureComponent {
     render(){
         return (
-            <section data-aos="fade-up" data-aos-duration="500" name="skill-section" className="skill-section">
+            <section data-aos="fade-up" data-aos-duration="500" name="skill-section" id="skill-section" className="skill-section">
                 <Text as="h3">Skills</Text>
                 <div className="skill-container">
                     <SkillCard title="Html" animation="flip-up" icon={logoHtml} level="95" color="#e44d26"/>
