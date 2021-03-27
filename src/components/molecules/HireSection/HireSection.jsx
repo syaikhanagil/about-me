@@ -6,7 +6,7 @@ import './HireSection.sass';
 class HireSection extends React.PureComponent {
     render(){
         return (
-            <section className="hire-section">
+            <section data-aos="fade-up" data-aos-duration="500" className="hire-section">
                 <div className="hire-container">
                     <Text as="h4">Want to use my services?</Text>
                     <Button primary link to="mailto:syaikhanagil.id@gmail.com">Hire Now</Button>

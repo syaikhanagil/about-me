@@ -18,6 +18,8 @@
   "author": "Saekhan Agil",
   "license": "MIT",
   "dependencies": {
+    "@loadable/component": "^5.14.1",
+    "aos": "^2.3.4",
     "classnames": "^2.2.6",
     "express": "^4.17.1",
     "feather-icons": "^4.28.0",

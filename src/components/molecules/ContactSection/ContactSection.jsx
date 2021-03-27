@@ -23,7 +23,7 @@ class ContactSection extends React.PureComponent {
 
     render(){
         return (
-            <section name="contact-section" className="contact-section">
+            <section data-aos="fade-up" data-aos-duration="500" name="contact-section" className="contact-section">
                 <Text as="h3">Contact</Text>
                 <div className="contact-container">
                     <Form rounded>

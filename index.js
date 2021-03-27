@@ -33,7 +33,7 @@ app.get('/*', (req, res, next) => {
    web: saekhanagil.com
 
 -->
-<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="X-UA-Compatible" content="IE=7"><meta name="google" content="notranslate"/>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="X-UA-Compatible" content="IE=7"><meta name="google" content="notranslate"/>
     <title>Saekhan Agil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="An ordinary people who really like web development, especially front-end development.">
@@ -41,11 +41,28 @@ app.get('/*', (req, res, next) => {
     <meta name="theme-color" content="#353353">
     <meta name="msapplication-navbutton-color" content="#353353">
     <meta name="apple-mobile-web-app-status-bar-style" content="#353353">
-    <meta property="og:url" content="//saekhanagil.com"/>
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="//www.saekhanagil.com"/>
     <meta property="og:title" content="Saekhan Agil"/>
-    <meta property="og:image" content="//saekhanagil.com/assets/images/site.png"/>
+    <meta property="og:image" content="//www.saekhanagil.com/assets/images/site.png"/>
     <meta property="og:description" content="An ordinary people who really like web development, especially front-end development."/>
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="icon" type="image/x-icon" href="/assets/logo-agil.png" />
+    <link rel="preload" href="/static/app.css" as="style">
+    <link rel="preload" href="/static/app.js" as="script">
     <link rel="stylesheet" href="/static/app.css">
+    <link rel="canonical" href="https://www.saekhanagil.com/" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-189310892-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-189310892-1');
+    </script>
+
     <style>
         #preloader {
             position: fixed;

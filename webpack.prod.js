@@ -24,7 +24,7 @@ const clientConfig = {
                 },
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/,
+                test: /\.(png|jpe?g|gif|svg|ico)$/,
                 exclude: /node_modules/,
                 use: [
                     {
@@ -94,7 +94,7 @@ const serverConfig = {
                 },
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/,
+                test: /\.(png|jpe?g|gif|svg|ico)$/,
                 exclude: /node_modules/,
                 use: [
                     {

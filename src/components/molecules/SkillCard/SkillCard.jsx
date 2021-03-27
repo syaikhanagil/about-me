@@ -7,9 +7,9 @@ import Text from '../../atoms/Text/Text';
 import './SkillCard.sass';
 
 const SkillCard = props => {
-    const {title, icon, level, color} = props;
+    const {title, icon, level, color, animation} = props;
     return (
-        <div className="sa-skill-card">
+        <div data-aos={animation} data-aos-duration="500" className="sa-skill-card">
             {icon && (
                 <Icon useSvg xl icon={icon}></Icon>
             )}
@@ -28,13 +28,15 @@ const SkillCard = props => {
 SkillCard.defaultProps = {
     title: '',
     level: '100',
+    animation: 'fade-up'
 }
 
 SkillCard.propTypes = {
     title: PropTypes.string,
     icon: PropTypes.any,
     level: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
+    animation: PropTypes.string
 }
 
 export default React.memo(SkillCard);

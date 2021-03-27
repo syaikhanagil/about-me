@@ -6,7 +6,7 @@ import './WorkSection.sass';
 class WorkSection extends React.PureComponent {
     render() {
         return (
-            <section name="work-section" className="work-section">
+            <section data-aos="fade-up" data-aos-duration="500" name="work-section" className="work-section">
                 <Text as="h3">Work Experience</Text>
                 <div className="work-container">
                     {work_experience.map((work, idx) => (

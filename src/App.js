@@ -1,13 +1,14 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import routes from './routes';
-
+import AOS from 'aos';
 class App extends React.PureComponent {
     componentDidMount() {
         const preloader = document.getElementById('preloader');
         setTimeout(() => {
             preloader.style.display = "none";
-        }, 2000);
+            AOS.init();
+        }, 1000);
     }
 
     render(){
