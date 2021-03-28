@@ -11,7 +11,7 @@ const Me = props => {
         <React.Fragment>
             {type === 'avatar' && (
                 <div className="me-avatar">
-                    <img src={`/${avatar}`} alt="Saekhan Agil"/>
+                    <img loading="lazy" src={`/${avatar}`} alt="Saekhan Agil"/>
                 </div>
             )}
             {type === 'banner' && (

@@ -8,9 +8,9 @@ import './AboutSection.sass';
 
 const AboutSection = (props) => {
     return (
-        <section data-aos="fade-up" data-aos-duration="500" name="about-section" className="about-section" id="about-section">
+        <section name="about-section" className="about-section" id="about-section">
             <Text as="h3">About Me</Text>
-            <div className="about-container">
+            <div data-aos="fade-up" data-aos-duration="500"  className="about-container">
                 <Me type="avatar"/>
                 <div className="about-card">
                     <div className="about-desc">
