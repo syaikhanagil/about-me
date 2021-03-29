@@ -44,9 +44,6 @@ class SideBar extends React.PureComponent {
                         <li className="sa-menu-item">
                             <Link to="work-section" spy={true} smooth={true} offset={0} duration={500} activeClass="active"><Icon icon="layers"/> Work Experience</Link>
                         </li>
-                        {/* <li className="sa-menu-item">
-                            <a><Icon icon="file-text"/> Blog</a>
-                        </li> */}
                         <li className="sa-menu-item">
                             <Link to="contact-section" spy={true} smooth={true} offset={0} duration={500} activeClass="active"><Icon icon="message-circle"/> Contact</Link>
                         </li>

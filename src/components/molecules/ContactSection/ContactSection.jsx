@@ -4,24 +4,66 @@ import Form from '../../atoms/Form/Form';
 import Input from '../../atoms/Input/Input';
 import Text from '../../atoms/Text/Text';
 import Textarea from '../../atoms/Textarea/Textarea';
-
+import Swal from 'sweetalert2';
 import './ContactSection.sass';
+import axios from 'axios';
+
 class ContactSection extends React.PureComponent {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             email: '',
             name: '',
             message: ''
         }
-        this.handleForm = this.handleForm.bind(this)
+        this.handleForm = this.handleForm.bind(this);
+        this.handleSent = this.handleSent.bind(this);
     }
 
-    handleForm(e){
-        this.setState({[e.target.name]: e.target.value})
+    handleForm(e) {
+        this.setState({ [e.target.name]: e.target.value })
     }
 
-    render(){
+    handleSent() {
+        // const uri = 'http://27.112.78.113:5000';
+        const uri = 'http://localhost:5000';
+        const { name, email, message } = this.state;
+        if (name && email && message) {
+            const payload = {
+                name: name, 
+                email: email,
+                message: message
+            }
+            axios.post(uri, payload, {
+                headers: {
+                    'Authorization': '997799889900'
+                }
+            }).then(res => {
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Message successfully sent',
+                    icon: 'success',
+                    confirmButtonText: 'Close'
+                })
+            }).catch(err => {
+                console.clear();
+                Swal.fire({
+                    title: 'Oops',
+                    text: 'Maybe server error',
+                    icon: 'error',
+                    confirmButtonText: 'Close'
+                })
+            })
+        } else {
+            Swal.fire({
+                title: 'Oops',
+                text: 'Please complete the form',
+                icon: 'error',
+                confirmButtonText: 'Close'
+            })
+        }
+    }
+    render() {
         return (
             <section data-aos="fade-up" data-aos-duration="500" name="contact-section" className="contact-section">
                 <Text as="h3">Contact</Text>
@@ -36,7 +78,7 @@ class ContactSection extends React.PureComponent {
                                 {this.state.message}
                             </Textarea>
                         </div>
-                        <Button primary block>Send Message</Button>
+                        <Button primary block onClick={this.handleSent}>Send Message</Button>
                     </Form>
                 </div>
             </section>

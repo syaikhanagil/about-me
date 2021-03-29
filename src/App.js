@@ -8,7 +8,7 @@ class App extends React.PureComponent {
         setTimeout(() => {
             preloader.style.display = "none";
             AOS.init();
-        }, 1000);
+        }, 500);
     }
 
     render(){
