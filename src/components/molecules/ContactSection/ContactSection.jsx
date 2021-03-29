@@ -25,8 +25,8 @@ class ContactSection extends React.PureComponent {
     }
 
     handleSent() {
-        // const uri = 'http://27.112.78.113:5000';
-        const uri = 'http://localhost:5000';
+        const uri = 'http://27.112.78.113:5000';
+        // const uri = 'http://localhost:5000';
         const { name, email, message } = this.state;
         if (name && email && message) {
             const payload = {
