@@ -6,7 +6,7 @@ import path from 'path';
 import { StaticRouter } from 'react-router-dom';
 
 const app = express();
-const PORT = 3002;
+const PORT = 3000;
 
 app.use('/static', express.static(path.resolve(__dirname, 'assets')));
 app.use('/assets', express.static(path.resolve(__dirname, 'assets/images')));
