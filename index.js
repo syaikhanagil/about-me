@@ -51,6 +51,7 @@ app.get('/*', (req, res, next) => {
     <link rel="preload" href="/static/app.css" as="style">
     <link rel="preload" href="/static/app.js" as="script">
     <link rel="stylesheet" href="/static/app.css">
+    <script data-ad-client="ca-pub-5331891012717692" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link rel="canonical" href="https://www.saekhanagil.com/" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-189310892-1"></script>
